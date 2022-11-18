@@ -1,0 +1,68 @@
+
+<html>
+<body>
+    <h3>Overlevelse-skjema</h3>
+<div>
+  <form action="predict" method="POST">
+    <input type="hidden" id="PassengerId" name="PassengerId" value="500" />
+    <br>
+    <label for="Pclass">Passasjerklasse</label>
+    <select id="Pclass" name="Pclass">
+      <option value="1">1. klasse</option>
+      <option value="2">2. klasse</option>
+      <option value="3">3. klasse</option>
+    </select>
+    <br>
+    <label for="Sex">Kjønn</label>
+    <select id="Sex" name="Sex">
+      <option value="0">Mann</option>
+      <option value="1">Kvinne</option>
+    </select>
+    <label for="age">Age</label>
+      <input type="text" id="Age" name="Age">
+      <input type="hidden" id="SibSp" name="SibSp" value="0" />
+      <input type="hidden" id="Parch" name="Parch" value="0" />
+    <br>
+    <label for="Fare">Bilettpris</label>
+    	<input type="text" id="Fare" name="Fare">
+    <br>
+    <label for="Embarked">Påstigningshavn</label>
+    <select id="Embarked" name="Embarked">
+      <option value="0">Southampton</option>
+      <option value="1">Cherbourg</option>
+      <option value="2">Queenstown</option>
+    </select>
+    <br>
+    <label for="Title">Tittel</label>
+    <select id="Title" name="Title">
+      <option value="1"> Mr</option>
+      <option value="2"> Mrs</option>
+      <option value="3"> Miss</option>
+      <option value="4"> Master</option>
+      <option value="5"> Don</option>
+      <option value="6"> Rev</option>
+      <option value="7"> Dr</option>
+      <option value="8"> Mme</option>
+      <option value="9"> Ms</option>
+      <option value="10"> Major</option>
+      <option value="11"> Lady</option>
+      <option value="12"> Sir</option>
+      <option value="13"> Mlle</option>
+      <option value="14"> Col</option>
+      <option value="15"> Capt</option>
+      <option value="16"> the Countess</option>
+      <option value="17"> Jonkheer</option>
+    </select>
+    <br>
+      
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+
+</div>
+
+<div>
+  <h1> {{ prediction }}</h1>
+</div>
+</body>
+</html>
